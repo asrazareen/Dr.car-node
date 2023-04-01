@@ -128,7 +128,7 @@ router.post("/login",
         } catch (e) {
             return res.status(500).json({
                 status: "Failed",
-                message: "e.message"
+                message: e.message
             })
         }
     });
