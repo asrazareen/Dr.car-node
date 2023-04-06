@@ -11,10 +11,12 @@ app.use(fileUpload());
 
 app.get("/user", async (req, res) => {
     const userid = req.user;
+    console.log(userid)
     const user = await User.findOne({ _id: userid });
-  res.status(200).json({
-    name: user.name,
-  });
+    console.log(user)
+//   res.status(200).json({
+//     name: user.name,
+//   });
 });
 
 app.get("/",async (req,res)=>{
@@ -43,8 +45,8 @@ app.post("/" , async (req,res) => {
         await Orders.create({
           status,
           services,
-          user,
-          address,
+          user, 
+          address, 
           brand,
           model,
           fuel,

@@ -40,7 +40,7 @@ app.use("/user",UserRoute)
 
 
 mongoose.connect(
-  "mongodb+srv://asrazareen:asra1999@cluster0.8bvzl30.mongodb.net/?retryWrites=true&w=majority",
+  "mongodb+srv://asrazareen:asra1999@cluster0.8bvzl30.mongodb.net/user",
   () => console.log("Connected to DB")
 );
 
